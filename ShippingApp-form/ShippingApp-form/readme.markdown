@@ -1,38 +1,21 @@
-# DotNetShipping
-
-[![Build status](https://ci.appveyor.com/api/projects/status/lom3p3jvvf4e9j3r?svg=true)](https://ci.appveyor.com/project/kylewest/dotnetshipping)
-[![NuGet Version](http://img.shields.io/nuget/v/DotNetShipping.svg?style=flat-square)](https://www.nuget.org/packages/DotNetShipping)
-
-.NET wrapper to UPS, FedEx, and USPS APIs. Use it to retrieve shipping rates from these carriers.
-
-
-## How to Install
-
-Available in the [NuGet Gallery](http://nuget.org/packages/DotNetShipping):
-
-```
-PM> Install-Package DotNetShipping
-```
-
-
 ## How to Use
 
 ```CSharp
 NameValueCollection appSettings = ConfigurationManager.AppSettings;
 
 // You will need a license #, userid and password to utilize the UPS provider.
-string upsLicenseNumber = appSettings["UPSLicenseNumber"];
-string upsUserId = appSettings["UPSUserId"];
-string upsPassword = appSettings["UPSPassword"];
+string upsLicenseNumber = "UPSLicenseNumber";
+string upsUserId = "UPSUserId";
+string upsPassword = "UPSPassword";
 
 // You will need an account # and meter # to utilize the FedEx provider.
-string fedexKey = appSettings["FedExKey"];
-string fedexPassword = appSettings["FedExPassword"];
-string fedexAccountNumber = appSettings["FedExAccountNumber"];
-string fedexMeterNumber = appSettings["FedExMeterNumber"];
+string fedexKey = "FedExKey";
+string fedexPassword = "FedExPassword";
+string fedexAccountNumber = "FedExAccountNumber";
+string fedexMeterNumber = "FedExMeterNumber";
 
 // You will need a userId to use the USPS provider. Your account will also need access to the production servers.
-string uspsUserId = appSettings["USPSUserId"];
+string uspsUserId = "USPSUserId";
 
 // Setup package and destination/origin addresses
 var packages = new List<Package>();
